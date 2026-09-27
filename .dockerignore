@@ -1,0 +1,10 @@
+.git
+.env
+**/.env
+node_modules
+**/node_modules
+vendor
+**/vendor
+frontend
+database/*.sqlite*
+storage/logs/*
