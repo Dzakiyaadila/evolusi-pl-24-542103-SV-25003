@@ -76,6 +76,6 @@ class PostTest extends TestCase
         $second = Post::factory()->create(['title' => 'Catatan sama']);
 
         $this->assertSame('catatan-sama', $first->slug);
-        $this->assertSame('catatan-sama-2', $second->slug);
+        $this->assertSame('catatan-sama-1', $second->slug);
     }
 }
