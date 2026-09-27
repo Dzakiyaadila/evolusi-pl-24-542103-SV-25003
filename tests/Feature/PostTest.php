@@ -69,4 +69,13 @@ class PostTest extends TestCase
         $response->assertRedirect(route('posts.index'));
         $this->assertDatabaseMissing('posts', ['id' => $post->id]);
     }
+
+    public function test_journal_entries_with_the_same_title_have_unique_slugs(): void
+    {
+        $first = Post::factory()->create(['title' => 'Catatan sama']);
+        $second = Post::factory()->create(['title' => 'Catatan sama']);
+
+        $this->assertSame('catatan-sama', $first->slug);
+        $this->assertSame('catatan-sama-1', $second->slug);
+    }
 }
