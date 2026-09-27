@@ -1,0 +1,59 @@
+@import './base.css';
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-header .brand,
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-header nav .router-link-exact-active {
+  color: #16805d;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+main h1 {
+  margin-bottom: 1rem;
+}
+
+main li {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-background-soft);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
