@@ -3,7 +3,7 @@ import { excerpt } from '../post'
 
 describe('excerpt', () => {
   it('keeps a short journal entry', () => {
-    expect(excerpt('  Catatan singkat  ')).toBe('Catatan singkat')
+    expect(excerpt('  Catatan singkat  ')).toBe('Teks yang sengaja salah')
   })
 
   it('shortens a long journal entry', () => {
